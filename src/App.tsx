@@ -21,27 +21,27 @@ function App() {
         setFormData(data);
     });
   return (
-    <>
+    <div style={{margin: '10px'}}>
         <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="aminoAcids1">
-                <Form.Label column={'lg'}>Input1</Form.Label>
+                <Form.Label column={'lg'}>Последовательность 1</Form.Label>
                 <Form.Control type="text" autoComplete={'true'} {...register("input1", input1)} required isInvalid={!!errors?.input1} />
                 <Form.Control.Feedback type="invalid">
                     {errors?.input1?.message?.toString()}
                 </Form.Control.Feedback>
             </Form.Group>
             <Form.Group className="mb-3" controlId="aminoAcids2">
-                <Form.Label column={'lg'}>Input2</Form.Label>
+                <Form.Label column={'lg'}>Последовательность 2</Form.Label>
                 <Form.Control type="text" autoComplete={'true'} {...register("input2", input2)} required isInvalid={!!errors?.input2} />
                 <Form.Control.Feedback type="invalid">
                     {errors?.input2?.message?.toString()}
                 </Form.Control.Feedback>
             </Form.Group>
-            <Button onClick={handleSubmit(onSubmit)}>Enter</Button>
+            <Button onClick={handleSubmit(onSubmit)}>Выровнять</Button>
         </Form>
 
         {formData && <Result data={formData}></Result>}
-    </>
+    </div>
   )
 }
 

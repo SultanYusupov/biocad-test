@@ -7,7 +7,7 @@ export default function Result({data}:FieldValues) {
                 return 'initial';
         }
         return(
-            <div>
+            <div style={{marginTop: '20px'}}>
                 <p>
                     {input1.split('').map((ch: keyof AminoAcidColorScheme, index: number) => {
                         return <span key={index} style={{backgroundColor: colorScheme[ch], borderRadius: '2px'}}>{ch}</span>

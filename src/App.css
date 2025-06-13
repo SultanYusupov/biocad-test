@@ -1,0 +1,13 @@
+.block {
+    margin: 10px;
+}
+
+@media screen and (max-width: 240px) {
+    .col-form-label-lg {
+        font-size: 0.6rem !important;
+    }
+    .block {
+        display: flex;
+        flex-direction: column;
+    }
+}

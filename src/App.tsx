@@ -21,11 +21,11 @@ function App() {
         setFormData(data);
     });
   return (
-    <div style={{margin: '10px'}}>
+    <div className={'block'}>
         <Form onSubmit={handleSubmit(onSubmit)}>
             <Form.Group className="mb-3" controlId="aminoAcids1">
-                <Form.Label column={'lg'}>Последовательность 1</Form.Label>
-                <Form.Control type="text" autoComplete={'true'} {...register("input1", input1)} required isInvalid={!!errors?.input1} />
+                <Form.Label column={'lg'} className={'label'}>Последовательность 1</Form.Label>
+                <Form.Control className={'inp'} type="text" autoComplete={'true'} {...register("input1", input1)} required isInvalid={!!errors?.input1} />
                 <Form.Control.Feedback type="invalid">
                     {errors?.input1?.message?.toString()}
                 </Form.Control.Feedback>

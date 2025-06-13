@@ -40,7 +40,7 @@ function App() {
             <Button onClick={handleSubmit(onSubmit)}>Enter</Button>
         </Form>
 
-        <Result data={formData}></Result>
+        {formData && <Result data={formData}></Result>}
     </>
   )
 }
